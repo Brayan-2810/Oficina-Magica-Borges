@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <!-- //Config base -->
+    <!-- Config base -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oficina Mágica</title>
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
 
     <script src="script.js" defer></script>
 </head>
@@ -16,33 +16,167 @@
 <body>
     <main>
         <div id="sombra"></div>
-        
+        <div id="cabeca">
             <header class="espaco_lateral">
-                <img src="./img/logoTest.svg" alt="Logo da Oficina Mágica">
+                <img src="./img/logo.svg" alt="Logo da Páginas e Grãos">
 
                 <nav id="menu" class="menu">
-                    <a href="#sobre">Sobre</a>
-                    <a href="#Brinquedos">Brinquedos</a>
-                    <a href="#Aulas">Aulas</a>
-                    <a href="#Contato">Contato</a>
-
-
-
-
+                    <a href="#nossa_historia">Sobre</a>
+                    <a href="#brinquedos">Brinquedos</a>
+                    <a href="#aulas">Aulas</a>
+                    <a href="#contato">Contato</a>
                 </nav>
 
                 <button id="menu_botao" onclick="abreFechaMenu()">
-                    
-                    <!-- Hamburguer -->
-                    <svg id="icone-barras" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
-                    <!-- X -->
-                    <svg id="icone-x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z"/></svg>
 
+                    <svg id="icone-barras" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                        <path
+                            d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+                    </svg>
+
+                    <svg id="icone-x" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 640"><!--!Font Awesome Pro v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.-->
+                        <path
+                            d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z" />
+                    </svg>
 
                 </button>
+
             </header>
-        
+        </div>
+
+        <section class="banner"></section>
+
+        <section class="cupom">
+            <h2>Novo Cupom Especial em </h2>
+        </section>
+
+        <section id="nossa_historia" class="espaco_lateral">
+            <div class="descricao">
+                <h2 class="titulo"><span>Nossa História</span></h2>
+                <p class="texto">Uma loja especializada em brinquedos sensoriais, desenvolvidos para estimular o
+                    aprendizado, a criatividade e o desenvolvimento de crianças, especialmente aquelas com necessidades
+                    especiais. Além da venda dos brinquedos, oferecemos cursos e oficinas práticas para ensinar pais,
+                    educadores e terapeutas a confeccionarem seus próprios materiais sensoriais, promovendo inclusão,
+                    autonomia e afeto no processo de aprendizagem.</p>
+            </div>
+            <div class="imgs_nh">
+                <div class="img01_nh">
+                    <img src="./img/mockup1.png" alt="Letreiro da loja Oficina Mágica">
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="brinquedos" class="espaco_lateral">
+            <h2 class="titulo">Brinquedos</h2>
+            <div class="cards_brinquedo">
+                <div class="card_brinquedo">
+
+                    <div class="img_brinquedos">
+                        <img src="./img/card1.png" alt="">
+                    </div>
+
+                    <div class="conteudo_preco">
+                        <div class="conteudo_coisas">
+                            <h3>Capivara Soneca</h3>
+                            <p>R$49,90</p>
+                            <h2>Receba 8% de Cashback!</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card_brinquedo">
+                    <div class="img_brinquedos">
+                        <img src="./img/card2.png" alt="">
+                    </div>
+                    <div class="conteudo_preco">
+                        <div class="conteudo_coisas">
+                            <h3>Crocodilo viajante</h3>
+                            <p>44,90</p>
+                            <h2>Receba 4% de Cashback!</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card_brinquedo">
+                    <div class="img_brinquedos">
+                        <img src="./img/card3.png" alt="">
+                    </div>
+                    <div class="conteudo_preco">
+                        <div class="conteudo_coisas">
+                            <h3>Elefante de Passeio</h3>
+                            <p>39,90</p>
+                            <h2>Receba 6% de Cashback!</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card_brinquedo">
+                    <div class="img_brinquedos">
+                        <img src="./img/card4.png" alt="">
+                    </div>
+                    <div class="conteudo_preco">
+                        <div class="conteudo_coisas">
+                            <h3>Cavalinho Guardião</h3>
+                            <p>34,90</p>
+                            <h2>Receba 10% de Cashback!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <div class="carrossel">
+            <div class="slides">
+                <img src="./img/carrossel1.png" alt="Imagem 1">
+                <img src="./img/carrossel2.png" alt="Imagem 2">
+                <img src="./img/carrossel3.png" alt="Imagem 3">
+            </div>
+
+            <button class="btn left" onclick="voltar()">❮</button>
+            <button class="btn right" onclick="avancar()">❯</button>
+        </div>
+
+        <!-- contato--------- -->
+
+        <section id="contato" class="espaco_lateral">
+            <h2 class="titulo">
+                Entre em Contato
+            </h2>
+
+            <div class="conteudo_contato">
+                <form onsubmit="entrarEmContato(event)">
+                    <div class="campo">
+                        <label for="campo_nome">Qual é o seu nome?</label>
+                        <input id="campo-nome" placeholder="Digite o seu nome..." type="text">
+                    </div>
+
+                    <div class="campo">
+                        <label for="campo_email">Qual é seu e-mail?</label>
+                        <input id="campo_email" placeholder="Digite o seu email..." type="email">
+                    </div>
+
+                    <div class="campo_descricao">
+                        <label for="campo_texto">Como podemos te ajudar</label>
+                        <textarea id="campo_texto" placeholder="Digite sua mensagem..." cols="30" rows="5"></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <iframe class="mapa" width="50%" height="550" frameborder="0"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Rua%20Niter%C3%B3i%20180,%20S%C3%A3o%20Caetano%20do%20Sul%20-%20S%C3%A3o%20Paulo,%20Brasil+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+
+            </div>
+
+        </section>
     </main>
+
 </body>
 
 </html>

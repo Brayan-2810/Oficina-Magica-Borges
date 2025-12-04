@@ -1,31 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "Charter-regular";
+    src: url(./fonts/Charter\ Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
-
-
-
-
 :root {
-    --branco: #fbfbfb;
-    --azulClaro: #00B2F3;
-    --azulEscuro: #053F66;
-    --preto: #000000;
-    --cinza: ;
+    --branco: #fff;
+    --preto: #000;
+    --fundo-site: #F3F2F2;
+    --azul: #00B2F3;
+    --azulescuro: #053F66;
+    --vermelho: #FA4541;
+    --cinza: #AEAEAE;
+    --cinzaescuro: #8E8E8E;
     --amarelo: #FFD900;
+    --cinzacard: #eeeeee;
 }
 
 .espaco_lateral {
     width: 80vw;
-    max-width: 1700px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
-/*---------Menu----------*/
 
+
+
+/* -------texto------- */
+.texto {
+    font-family: "Montserrat regular", sans-serif;
+    font-size: 30px;
+    text-align: justify;
+}
+
+.titulo {
+    font-family: "Days One", sans-serif;
+    color: var(--azulescuro);
+    font-size: 37px;
+    text-align: center;
+
+    /* Prepara para posicionar o sublinhado (a "régua") */
+    position: relative;
+    /* Remove o sublinhado padrão que é sempre do tamanho do texto */
+    text-decoration: none;
+    margin-bottom: 40px;
+    /* Para dar espaço */
+}
+
+
+.titulo::after {
+    /* OBRIGATÓRIO para o elemento aparecer */
+    content: "";
+
+    /* Configuração do Comprimento */
+    display: block;
+    width: 255px;
+    /* max-width: 60%; */
+    /* << AQUI VOCÊ CONTROLA O COMPRIMENTO! */
+
+    /* Configuração do Estilo */
+    height: 2px;
+    background-color: var(--verde);
+
+    /* Posicionamento para centralizar a linha */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2px;
+    /* Ajuste a distância do texto */
+}
+
+
+/* -------- Menu ------- */
 header {
     height: 165px;
     display: flex;
@@ -39,46 +95,44 @@ header img {
 
 .menu {
     max-width: 700px;
-    width: 70vw;
+    width: 70%;
     display: flex;
     justify-content: space-between;
 }
 
 .menu a {
     font-size: 25px;
-    color: var(--azulEscuro);
+    color: var(--preto);
     text-decoration: none;
-    text-transform: uppercase;
-    font-family: "Inter", sans serif;
-
+    /* text-transform: uppercase; */
+    font-family: "Inter", sans-serif;
 }
 
 .menu a:hover {
     color: var(--amarelo);
 }
 
-#head-azul {
-    background-color: var(--azulClaro);
-}
-
-/* -------- Mneu Hamburguer ---------- */
-#icone-barras {}
-
-#icone-x {}
-
+/* -------- Menu Hamburguer ------- */
+#icone-barras,
+#icone-x,
 #menu_botao {
     display: none;
 }
 
-/*-----------Responsividade------------ */
-@media screen and (max-width: 700) {
+
+
+
+
+
+/* ---------- Reponsividade ---------------- */
+@media screen and (max-width: 768px) {
     #sombra {
-        background-color: var(--azulEscuro);
+        background-color: var(--azulescuro);
         backdrop-filter: blur(10px);
         z-index: 1;
         position: fixed;
         width: 100vw;
-        height: 100vw;
+        height: 100vh;
         right: -101vw;
         transition: .5s;
     }
@@ -100,11 +154,10 @@ header img {
 
         display: unset;
         cursor: pointer;
-
     }
 
     header svg {
-        fill: var(--preto);
+        fill: var(--branco);
     }
 
     #icone-barras {
@@ -121,8 +174,356 @@ header img {
 
         position: fixed;
         top: 165px;
-        right: 0;
+        right: -210px;
         z-index: 1;
         transition: .5s;
     }
+
+    .menu a {
+        color: var(--branco);
+    }
+}
+
+#cabeca {
+    background-color: var(--azul);
+}
+
+/* -------Banner------ */
+
+.banner {
+    background-image: url(./img/banner1.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -------Cupom------- */
+.cupom {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--vermelho);
+}
+
+.cupom h2 {
+    font-size: 30px;
+    color: var(--branco);
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+/* -----------nossa historia-------- */
+
+#nossa_historia {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+}
+
+.descricao {
+    width: 48%;
+    max-width: 600px;
+}
+
+.imgs_nh {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+}
+
+.img01_nh {
+    width: 100%;
+}
+
+.img01_nh img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+/* --------brinquedos------- */
+
+#brinquedos {
+    margin-bottom: 150px;
+}
+
+#brinquedos.titulo {
+    margin-bottom: 50px;
+}
+
+/* #cardapio .titulo::after {
+    width: 255px;
+} */
+
+.cards_brinquedo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+}
+
+.card_brinquedo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    height: 500px;
+    background: var(--branco);
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+    gap: 30px;
+}
+
+/* .card_cardapio:hover {
+    height: 400px;
+} */
+
+.card_brinquedo .img_brinquedos {
+    position: absolute;
+    width: 280px;
+    height: 350px;
+    border-radius: 12px;
+    /* overflow: hidden;
+    transition: 0.5s; */
+    background-color: var(--cinzacard);
+    margin-top: 10px;
+
+}
+
+/* .card_cardapio:hover .img_comidas {
+    top: -100px;
+    scale: 0.75;
+} */
+
+.card_brinquedo .img_brinquedos img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    /* box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.card_brinquedo .conteudo_preco {
+    position: absolute;
+    top: 370px;
+    width: 100%;
+    padding: 0 10px;
+    /* height: 35px; */
+    /* text-align: center; */
+
+}
+
+
+
+.card_brinquedo .conteudo_preco h3 {
+    font-size: 20px;
+    font-family: "Montserrat", "light";
+    color: var(--preto);
+}
+
+/* .card_brinquedo .conteudo_preco p {
+    margin-top: 10px;
+    color: var(--preto);
+    text-align: center;
+    line-height: 30px;
+    
+} */
+
+.conteudo_coisas {
+    display: flex;
+    justify-self: start;
+    flex-direction: column;
+}
+
+.conteudo_coisas p {
+    font-family: "Inter", "regular";
+    font-size: 25px;
+    color: var(--azul);
+    margin-top: 15px;
+}
+
+.conteudo_coisas h2 {
+    font-size: 12px;
+    font-family: "Inter", "regular";
+    color: var(--cinzaescuro);
+}
+/* ---------carrossel-------- */
+
+.carrossel {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  margin: auto;
+  /* border-radius: 10px; */
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.slides img {
+  width: 100vw;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.left { left: 10px; }
+.right { right: 10px; }
+
+
+/* ---------contato--------- */
+
+#contato {
+    margin-bottom: 150px;
+}
+
+.conteudo_contato {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    background-color: var(--azulescuro);
+    border-radius: 30px;
+    height: 700px;
+
+    /* flex-wrap: wrap; */
+}
+
+.conteudo_contato form {
+    /* width: 80%; */
+    flex: 1;
+    max-width: 500px;
+
+    color: var(--branco);
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+}
+
+.campo {
+    width: 100%;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.campo_descricao {
+    width: 100%;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.campo input {
+    height: 40px;
+
+    color: var(--branco);
+    background-color: var(--branco);
+
+    border: none;
+    border-radius: 10px;
+
+    text-indent: 10px;
+
+    outline: none;
+}
+
+.campo_descricao textarea {
+    color: var(--preto);
+    background-color: var(--branco);
+
+    border: none;
+    border-radius: 10px;
+
+    outline: none;
+
+    padding: 10px;
+
+    resize: none;
+}
+
+.campo label,
+.campo_descricao label {
+    margin-bottom: 15px;
+}
+
+.campo input,
+.campo_descricao textarea {
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+}
+
+.campo input::placeholder,
+.campo_descricao textarea::placeholder {
+    color: #a0a0a0;
+}
+
+.campo input:focus,
+.campo_descricao textarea:focus {
+    outline: 2px solid var(--amarelo);
+}
+
+.conteudo_contato form button {
+    height: 40px;
+    width: 100%;
+
+    background-color: var(--azul);
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 17px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    /* Bold */
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: background-color 500ms;
+}
+
+.conteudo_contato form button:hover {
+    background-color: var(--amarelo);
+}
+
+.mapa {
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    flex: 1;
+    max-width: 500px;
 }

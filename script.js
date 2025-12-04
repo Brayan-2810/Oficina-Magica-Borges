@@ -1,34 +1,66 @@
-//menu hamburgeur
+//Menu Hamburguer 
 let menu = document.getElementById("menu")
 let iconeBarras = document.getElementById("icone-barras")
 let iconeX = document.getElementById("icone-x")
 let sombra = document.getElementById("sombra")
 
-function abreFechaMenu() {
-    //se o menu está fechado
-    if (window.getComputedStyle(menu).right == "-210px") {
-        //abrir menu
+function abreFechaMenu(){
+    //Se o menu está fechado
+    if(window.getComputedStyle(menu).right == "-210px"){
+        //Abrir o menu
         menu.style.right = "0"
 
-        //mostrar icone-x
+        //Mostrar icone X
         iconeX.style.display = "inline"
 
-        //esconde icone-barras
+        //Esconde icone barras
         iconeBarras.style.display = "none"
 
-        sombra.style.rigth = "0"
+        sombra.style.right = "0"
 
-    } else {
-        // fechar menu
+    }else{
+        //Fechar o menu
         menu.style.right = "-210px"
 
-        // esconder icone x
-        menu.style.display = "none"
+        //Esconder icone X
+        iconeX.style.display = "none"
 
-        // mostrar o icone barras
+        //Mostrar o icone barras
         iconeBarras.style.display = "inline"
 
         sombra.style.right = "-101vw"
+    }   
+}
 
+onresize = () =>{
+    if(window.getComputedStyle(menu).right == "-210px"){
+        //Mostra icone X
+        iconeX.style.display = "none"
+    }else{
+        //Esconde icone barras
+        iconeBarras.style.display = "inline"
     }
+}
+
+
+
+//------corrossel--------
+
+let index = 0;
+
+function mostrarSlide() {
+  const slides = document.querySelector(".slides");
+  slides.style.transform = `translateX(${-index * 400}px)`;
+}
+
+function avancar() {
+  const total = document.querySelectorAll(".slides img").length;
+  index = (index + 1) % total;  
+  mostrarSlide();
+}
+
+function voltar() {
+  const total = document.querySelectorAll(".slides img").length;
+  index = (index - 1 + total) % total;
+  mostrarSlide();
 }
