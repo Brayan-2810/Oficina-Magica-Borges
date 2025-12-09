@@ -50,7 +50,7 @@ let index = 0;
 
 function mostrarSlide() {
   const slides = document.querySelector(".slides");
-  slides.style.transform = `translateX(${-index * 400}px)`;
+  slides.style.transform = `translateX(${-index * 100}vw)`;
 }
 
 function avancar() {
