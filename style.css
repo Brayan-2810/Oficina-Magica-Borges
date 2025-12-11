@@ -458,8 +458,8 @@ header img {
     flex-direction: column;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 600px;
+    justify-content: space-evenly;
+    height: 650px;
 
 }
 
@@ -477,22 +477,40 @@ header img {
     border-radius: 30px;
     background-color: var(--amarelo);
     color: var(--vermelho);
-}
-
-button {
-    box-shadow: 0px 0px rgba(0 , 0 , 0 , 0.3)
+    cursor: pointer;
 }
 
 
-button p {
-    font-size: 70px;
-    font-family: "Montserrat", "extrabold";
+
+.quadro p {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 15px;
+    font-family: "inter", sans-serif;
+    color: var(--branco);
+}
+
+
+.conteudo_cupom button p {
+    font-size: 90px;
+    font-family: "Inter", bold;
     color: var(--vermelho);
 }
 
+/* .conteudo_cupom p {
+    font-size: 15px;
+    font-family: "inter", sans-serif;
+    color: var(--branco);
+} */
 
+.button p {
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: "inter", sans-serif;
+    color: var(--branco);
+}
 
-.conteudo_cupom p {}
 
 
 /* ---------contato--------- */
@@ -552,7 +570,7 @@ button p {
 .campo input {
     height: 40px;
 
-    color: var(--branco);
+    color: var(--preto);
     background-color: var(--branco);
 
     border: none;
@@ -642,14 +660,15 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 60px;
-    
+
 }
 
 footer p {
     font-family: "Montserrat", sans-serif;
 }
-.redes_sociais p{
- font-family: "Montserrat", sans-serif;
+
+.redes_sociais p {
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -695,4 +714,200 @@ footer .texto {
 
 .icon_redes a svg {
     width: 80px;
+}
+
+
+/* --------responsividade-------- */
+@media screen and (max-width: 1024px) {
+
+    header img {
+        width: 140px;
+    }
+
+    .menu {
+        justify-content: space-evenly;
+    }
+
+    .banner {
+        height: 50vh;
+    }
+
+    #nossa_historia {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .descricao {
+        margin-bottom: 100px;
+    }
+
+    .descricao,
+    .imgs_nh {
+        width: 90%;
+        max-width: 768px;
+    }
+
+    .img_eventos {
+        display: none;
+    }
+
+    .conteudo_eventos {
+        width: 100%;
+        align-items: center;
+    }
+
+    .card_eventos .texto {
+        text-align: center;
+    }
+
+    .conteudo_contato form,
+    .mapa {
+        margin: 0 auto;
+    }
+
+    #horarios {
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .conteudo_horarios {
+        width: 80%;
+        max-width: 550px;
+    }
+
+    #horarios img {
+        width: 100%;
+        max-width: 550px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #sombra {
+        background-color: #9D562390;
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        right: -101vw;
+        transition: .5s;
+    }
+
+    #menu_botao {
+        display: block;
+        z-index: 1;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+
+        background: none;
+        border: none;
+
+        display: unset;
+        cursor: pointer;
+    }
+
+    header svg {
+        fill: var(--cafe);
+    }
+
+    #icone-barras {
+        display: block;
+    }
+
+    nav.menu {
+        /* height: 100vh; */
+        width: 200px;
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 15px;
+
+        position: fixed;
+        top: 165px;
+        right: -210px;
+        z-index: 1;
+        transition: .5s;
+    }
+
+    .menu a {
+        color: #5C2702;
+    }
+
+    .banner {
+        background-position: 0 0;
+    }
+
+    .carousel-control-prev {
+        left: -64px;
+    }
+
+    .carousel-control-next {
+        right: -64px;
+    }
+
+    .roda_pe {
+        justify-content: center;
+    }
+
+    .icon_redes {
+        justify-content: center;
+    }
+
+    .conteudo_contato {
+        flex-direction: column;
+    }
+
+    .mapa,
+    .conteudo_contato form {
+        width: 100%;
+    }
+
+    .mapa {
+        aspect-ratio: 1;
+    }
+
+
+}
+
+@media screen and (max-width: 425px) {
+    .banner {
+        background-position: -130px 8px;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .carousel-control-prev {
+        left: -35px;
+    }
+
+    .carousel-control-next {
+        right: -36px;
+    }
+
+    .card_livro h3 {
+        font-size: 15px;
+    }
+
+    .card_livro p {
+        font-size: 13px;
+    }
+
+    .filter_btn {
+        padding: 3px 5px;
+        font-size: 15px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
 }
