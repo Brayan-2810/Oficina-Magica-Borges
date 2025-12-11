@@ -721,7 +721,7 @@ footer .texto {
 @media screen and (max-width: 1024px) {
 
     header img {
-        width: 140px;
+        width: 120px;
     }
 
     .menu {
@@ -747,14 +747,31 @@ footer .texto {
         max-width: 768px;
     }
 
-    .img_eventos {
-        display: none;
+    .carrossel img {
+        max-width: 1024px;
     }
 
-    .conteudo_eventos {
-        width: 100%;
-        align-items: center;
+
+.cupom{
+    max-width: 400px;
+    
+}
+
+
+
+    /* .quadro {
+        max-width: 60vw;
+
     }
+
+    .conteudo_cupom {
+        max-width: 50%;
+    }
+
+    .button {
+        max-height: 100px;
+        max-width: 150px;
+    } */
 
     .card_eventos .texto {
         text-align: center;
@@ -845,12 +862,8 @@ footer .texto {
         background-position: 0 0;
     }
 
-    .carousel-control-prev {
-        left: -64px;
-    }
-
-    .carousel-control-next {
-        right: -64px;
+    .carrossel img {
+        max-width: 768px;
     }
 
     .roda_pe {
@@ -867,7 +880,7 @@ footer .texto {
 
     .mapa,
     .conteudo_contato form {
-        width: 100%;
+        width: 80%;
     }
 
     .mapa {
@@ -882,23 +895,19 @@ footer .texto {
         background-position: -130px 8px;
     }
 
-    .icons {
+    .cupom {
         display: none;
     }
 
-    .carousel-control-prev {
-        left: -35px;
+    .carrossel img {
+        max-width: 425px;
     }
 
-    .carousel-control-next {
-        right: -36px;
-    }
-
-    .card_livro h3 {
+    .card_brinquedo h3 {
         font-size: 15px;
     }
 
-    .card_livro p {
+    .card_briinquedo p {
         font-size: 13px;
     }
 
@@ -910,4 +919,9 @@ footer .texto {
     .titulo {
         font-size: 30px;
     }
+
+    .conteudo_contato {
+        height: 1000px;
+    }
 }
+
